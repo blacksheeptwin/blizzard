@@ -9,7 +9,3 @@ try:
 except:
     print('Enter a valid file name:')
     exit()
-
-print("hey liam")
-
-#trial
