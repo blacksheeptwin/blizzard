@@ -12,6 +12,7 @@ for line in fh:
 average = total/count
 print("Average spam confidence:",average)
 '''
+'''
 #Assignment 8.4
 list2 = list()
 file = input ("Enter file name: ")
@@ -24,3 +25,15 @@ for liam in fh:
             list2.append(words)
 list2.sort()
 print(list2)
+'''
+#Assignment 8.5
+count = 0
+file = input("Enter file name: ")
+fh = open(file)
+for line in fh:
+    line2 = line.rstrip()
+    if line2.startswith('From ') :
+        newline = line2.split()
+        count = count + 1
+        print(newline[1])
+print ("There were",  count, "lines in the file with From as the first word")
