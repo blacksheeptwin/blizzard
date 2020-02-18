@@ -24,7 +24,9 @@ for liam in fh:
         if (words not in list2):
             list2.append(words)
 list2.sort()
+
 print(list2)
+'''
 '''
 #Assignment 8.5
 count = 0
@@ -37,3 +39,29 @@ for line in fh:
         count = count + 1
         print(newline[1])
 print ("There were",  count, "lines in the file with From as the first word")
+'''
+'''
+#Assignment 8.4 again
+
+file = input("Enter File Name ")
+fh = open(file)
+list2 = list()
+for line in fh:
+    list1 = line.split()
+    for x in list1:
+        if(x not in list2):
+            list2.append(x)
+list2.sort()
+print(list2)
+'''
+#Assignment 8.5 again
+count = 0
+file = input("Enter file name ")
+fh = open(file)
+for line in fh:
+    if(line.startswith('From ')):
+        newline = line.split()
+        indexline=newline[1]
+        count = count + 1
+        print(indexline)
+print(count)
