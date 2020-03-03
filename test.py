@@ -78,11 +78,12 @@ for line in fh: # Go through each line in the file
         hashtable[line3] = hashtable.get(line3,0) + 1  # Create histogram hash table
 hashkey = None
 hashvalue = None
-for line3, value in hashtable.items(): 
+for line3, value in hashtable.items():
         if hashkey is None or value > hashvalue:
             hashkey = line3
             hashvalue = value
 print(hashkey, hashvalue)
 
+#hi liam
 
 #Assignment 9.4
