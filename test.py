@@ -74,11 +74,11 @@ hashtable=dict() #Create a blank dictionary
 for line in fh: # Go through each line in the file
     if(line.startswith('From ')):  # If the line start with "from"
         line2=line.split()  #Split the words in each line
-        line3= line2[1]
-        hashtable[line3] = hashtable.get(line3,0) + 1
+        line3= line2[1]  #Take the second word of the line as the sender address
+        hashtable[line3] = hashtable.get(line3,0) + 1  # Create histogram hash table
 hashkey = None
 hashvalue = None
-for line3, value in hashtable.items():
+for line3, value in hashtable.items(): 
         if hashkey is None or value > hashvalue:
             hashkey = line3
             hashvalue = value
