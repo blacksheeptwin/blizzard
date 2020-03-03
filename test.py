@@ -54,6 +54,7 @@ for line in fh:
 list2.sort()
 print(list2)
 '''
+'''
 #Assignment 8.5 again
 count = 0
 file = input("Enter file name ")
@@ -65,3 +66,23 @@ for line in fh:
         count = count + 1
         print(indexline)
 print(count)
+
+'''
+file = input("Enter File Name ") #Enter file name
+fh = open(file) #Open the file
+hashtable=dict() #Create a blank dictionary
+for line in fh: # Go through each line in the file
+    if(line.startswith('From ')):  # If the line start with "from"
+        line2=line.split()  #Split the words in each line
+        line3= line2[1]
+        hashtable[line3] = hashtable.get(line3,0) + 1
+hashkey = None
+hashvalue = None
+for line3, value in hashtable.items():
+        if hashkey is None or value > hashvalue:
+            hashkey = line3
+            hashvalue = value
+print(hashkey, hashvalue)
+
+
+#Assignment 9.4
